@@ -354,7 +354,7 @@ public class PrincipalUI extends javax.swing.JFrame {
       try {
         while (this.running) {
           Thread.sleep(this.temp);
-          readPageHtml(this.link);
+          jogosRodada(this.link);
         }
       } catch (IOException | InterruptedException ex) {
         btnstart.setEnabled(true);
@@ -392,6 +392,13 @@ public class PrincipalUI extends javax.swing.JFrame {
       }
     }
 
+  }
+  
+  public void jogosRodada(String link) throws IOException {
+    Document html = Jsoup.connect(link).get();
+    Element containerPrincipal = html.getElementsByClass("row align-items-center content").first();
+    System.out.println(containerPrincipal.html());
+      System.out.println("\n\n\n");
   }
 
   public class SelectedListCellRenderer extends DefaultListCellRenderer {
