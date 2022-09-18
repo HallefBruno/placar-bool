@@ -3,20 +3,24 @@ package placarbool;
 public class Placar {
 
     private String status;
-    private String time01;
-    private String separador;
-    private String time02;
+    private String primeiroTime;
+    private String golsPrimeiroTime;
+    private String segundoTime;
+    private String golsSeguntoTime;
+    private String link;
+
+    public Placar(String status, String primeiroTime, String golsPrimeiroTime, String segundoTime, String golsSeguntoTime, String link) {
+        this.status = status;
+        this.primeiroTime = primeiroTime;
+        this.golsPrimeiroTime = golsPrimeiroTime;
+        this.segundoTime = segundoTime;
+        this.golsSeguntoTime = golsSeguntoTime;
+        this.link = link;
+    }
 
     public Placar() {
     }
     
-    public Placar(String status, String time01, String separador, String time02) {
-        this.status = status;
-        this.time01 = time01;
-        this.separador = separador;
-        this.time02 = time02;
-    }
-
     public String getStatus() {
         return status;
     }
@@ -25,28 +29,46 @@ public class Placar {
         this.status = status;
     }
 
-    public String getTime01() {
-        return time01;
+    public String getPrimeiroTime() {
+        return primeiroTime;
     }
 
-    public void setTime01(String time01) {
-        this.time01 = time01;
+    public void setPrimeiroTime(String primeiroTime) {
+        this.primeiroTime = primeiroTime;
     }
 
-    public String getSeparador() {
-        return separador;
+    public String getGolsPrimeiroTime() {
+        return golsPrimeiroTime;
     }
 
-    public void setSeparador(String separador) {
-        this.separador = separador;
+    public void setGolsPrimeiroTime(String golsPrimeiroTime) {
+        this.golsPrimeiroTime = golsPrimeiroTime;
     }
 
-    public String getTime02() {
-        return time02;
+    public String getSegundoTime() {
+        return segundoTime;
     }
 
-    public void setTime02(String time02) {
-        this.time02 = time02;
+    public void setSegundoTime(String segundoTime) {
+        this.segundoTime = segundoTime;
     }
 
+    public String getGolsSeguntoTime() {
+        return golsSeguntoTime;
+    }
+
+    public void setGolsSeguntoTime(String golsSeguntoTime) {
+        this.golsSeguntoTime = golsSeguntoTime;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
+
+    
+    
 }
